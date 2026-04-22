@@ -50,42 +50,39 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          My <span>Achievements</span>
+          My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(2)].map((_value, index) => (
+          {[
+            {
+              title: "My football journey",
+              category: "Personal Interest",
+              desc: "I have been very passionate about football from very young age. And inspired from great players like Messi and Ronaldo",
+              img: "/images/MyTeam.webp",
+              alt: "A photo with my Team"
+            },
+            {
+              title: "Japanese Learning",
+              category: "Language",
+              desc: "I have around 800 days of learning japanese now. I take learning hard things as a challenge and like to solve them",
+              img: "/images/Japanese.webp",
+              alt: "A photo of Shin-Chan family & friends with Japnese Language 750+ days streak written at center"
+            }
+          ].map((item, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
-
                   <div>
-                    <h4>My football journey</h4>
-                    <p>Category</p>
+                    <h4>{item.title}</h4>
+                    <p>{item.category}</p>
                   </div>
                 </div>
                 <h4>Description</h4>
-                <p>I have been very passionate about football from very young age.
-                  And inspired from great players like Messi and Ronaldo</p>
+                <p>{item.desc}</p>
               </div>
-              <WorkImage image="/images/MyTeam.webp" alt="A photo with my Team" />
-
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
-                  <div>
-                    <h4>Japanese Learning</h4>
-                    <p>Category</p>
-                  </div>
-                </div>
-                <h4>Description</h4>
-                <p>I have around 800 days of learning japanese now. 
-                  I take learning hard things as a challenge and like to solve them</p>
-              </div>
-              <WorkImage image="/images/Japanese.webp" alt="A photo of Shin-Chan family & friends with Japnese Language 750+ days streak written at center" />
+              <WorkImage image={item.img} alt={item.alt} />
             </div>
-            
           ))}
         </div>
       </div>
