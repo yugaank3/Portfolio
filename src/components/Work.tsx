@@ -53,7 +53,7 @@ const Work = () => {
           My <span>Achievements</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {[...Array(2)].map((_value, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
@@ -69,7 +69,23 @@ const Work = () => {
                   And inspired from great players like Messi and Ronaldo</p>
               </div>
               <WorkImage image="/images/MyTeam.webp" alt="A photo with my Team" />
+
+              <div className="work-info">
+                <div className="work-title">
+                  <h3>0{index + 1}</h3>
+
+                  <div>
+                    <h4>Japanese Learning</h4>
+                    <p>Category</p>
+                  </div>
+                </div>
+                <h4>Description</h4>
+                <p>I have around 800 days of learning japanese now. 
+                  I take learning hard things as a challenge and like to solve them</p>
+              </div>
+              <WorkImage image="/images/Japanese.webp" alt="A photo of Shin-Chan family & friends with Japnese Language 750+ days streak written at center" />
             </div>
+            
           ))}
         </div>
       </div>
