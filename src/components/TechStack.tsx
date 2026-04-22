@@ -21,7 +21,7 @@ const imageUrls = [
   // "/images/mysql.webp",
   // "/images/typescript.webp",
   // "/images/javascript.webp",
-  "/images/python.webp",
+  "/images/Python.webp",
   "/images/Matlab.webp",
   "/images/C++.webp"
 ];
